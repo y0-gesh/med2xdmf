@@ -1,0 +1,73 @@
+
+.c-p {
+  /* make a circle */
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: var(--backgroundfill-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  /* animation: fill ease-in-out 3s; */
+  transform: rotate(0deg);
+  overflow: hidden;
+}
+.animate_out {
+  animation: fill ease-in-out 3s;
+  transform: rotate(0deg);
+}
+
+.c-p .cc {
+  width: 175px;
+  height: 350px;
+  /* border-radius: 50%; */
+  background-color: rgb(89, 89, 90);
+}
+.c-p .cd {
+  width: 175px;
+  height: 350px;
+  /* border-radius: 50%; */
+  background-color: rgb(254, 188, 46);
+}
+
+.in_c {
+  position: absolute;
+  background-color: aqua;
+  text-align: center;
+  width: 92%;
+  height: 92%;
+  border-radius: 50%;
+  z-index: 100;
+  overflow: hidden;
+  /* animation: antifill ease-in-out 3s; */
+}
+.animate_in{
+  animation: antifill ease-in-out 3s;
+}
+.in_c div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--droparea-color);
+  height: 100%;
+  color: #ffffff;
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes antifill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

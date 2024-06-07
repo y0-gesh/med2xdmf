@@ -1,0 +1,194 @@
+.drop_area_container {
+  background-color: var(--backgroundfill-color);
+  aspect-ratio: 1/1;
+  height: 400px;
+  width: 400px;
+  /* width: 100%;
+  height: 100%; */
+  /* padding: 12px; */
+  position: relative;
+  border-radius: 10px;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dragable_area {
+  width: 100%;
+  /* height: 30px; */
+  position: relative;
+  -webkit-app-region: drag;
+}
+.navbar_window {
+  width: inherit;
+  position: absolute;
+  display: flex;
+  top: 0px;
+  height: 22px;
+}
+.navigation_btn1 {
+  z-index: 1000;
+  position: relative;
+  left: 15px;
+  top: 15px;
+}
+.close_icon {
+  display: flex;
+  width: 12px;
+  height: 12px;
+  padding: 2px;
+  background-color: rgb(239 68 68);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.navigation_btn1 .close_icon .close_window {
+  opacity: 0;
+  transition: 0.3s all ease-out;
+}
+.navigation_btn1 .close_icon .close_window:hover {
+  opacity: 1;
+}
+
+.drop_circle {
+  background-color: var(--droparea-color);
+  height: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  /* border-right: 10px solid rgb(254, 188, 46);
+  border-top: 10px solid rgb(254, 188, 46);
+  border-left: 10px solid rgb(89, 89, 90);
+  border-bottom: 10px solid rgb(89, 89, 90); */
+  transform: rotate(45deg);
+}
+.drop_circle_inside {
+  /* transform: rotate(-45deg); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.drop_para {
+  margin: 14px 40px;
+  text-align: center;
+  font-size: medium;
+}
+.dropzone {
+  overflow: auto;
+  box-sizing: border-box;
+}
+.drop-area-container .actions {
+  position: sticky;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+.drop-area-container .upload {
+  max-width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.drop-area-container .upload ul {
+  list-style-type: circle;
+}
+
+.actions .bn3 {
+  display: inline-block;
+  padding: 0.5em 1.7em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgb(107, 167, 252);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: var(--droparea-color);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.actions .bn3:hover {
+  color: white;
+  background-color: var(--backgroundfill-color);
+}
+
+/* loading animation:  */
+
+.c-p {
+  /* make a circle */
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: var(--backgroundfill-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  /* animation: fill ease-in-out 3s; */
+  transform: rotate(0deg);
+  overflow: hidden;
+}
+
+.animate_out {
+  animation: fill ease-in-out 3s;
+  transform: rotate(0deg);
+}
+
+.c-p .cc {
+  width: 175px;
+  height: 350px;
+  /* border-radius: 50%; */
+  background-color: rgb(89, 89, 90);
+}
+.c-p .cd {
+  width: 175px;
+  height: 350px;
+  /* border-radius: 50%; */
+  background-color: rgb(254, 188, 46);
+}
+
+.in_c {
+  position: absolute;
+  background-color: aqua;
+  text-align: center;
+  width: 92%;
+  height: 92%;
+  border-radius: 50%;
+  z-index: 100;
+  overflow: hidden;
+  /* animation: antifill ease-in-out 3s; */
+}
+.animate_in {
+  animation: antifill ease-in-out 3s;
+}
+.in_c div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--droparea-color);
+  height: 100%;
+  color: #ffffff;
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes antifill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

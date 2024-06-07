@@ -1,0 +1,112 @@
+.app{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* width: 100%; */
+  max-width: fit-content;
+}
+.navbar {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  /* background-color: #377aff; */
+}
+.funcBtn {
+  margin-right: 0px;
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+}
+.funcBtn button {
+  /* width: 35px; */
+  z-index: 1000;
+  padding: 12px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  color: #fff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  backface-visibility: hidden;
+}
+.funcBtn button:hover {
+  background-color: rgb(39, 43, 52);
+}
+.funcBtn button:last-child:hover {
+  background-color: rgb(100, 0, 0);
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.navbar li a:hover {
+  color: #f1f1f1;
+}
+.navbar .drag-header {
+  width: 100%;
+  /* background-color: greenyellow; */
+  -webkit-app-region: drag;
+}
+.navbar li {
+  list-style: none;
+}
+
+
+.app_container {
+  display: flex;
+  /* justify-content: space-evenly; */
+  justify-content: center;
+  align-items: center;
+  /* height: 95vh; */
+
+}
+.drop_area {
+  /* margin-top: 150px; */
+  /* margin-left: 60px; */
+  /* height: 100%; */
+  /* background-color: var(--backgroundfill-color);
+  border-radius: 12px; */
+}
+.para_view {
+  /* margin-top: 50px; */
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* .drop_circle {
+  animation: rotate 3s linear infinite;
+}
+
+.drop_circle_inside {
+  animation: counter-rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes counter-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+} */
+
